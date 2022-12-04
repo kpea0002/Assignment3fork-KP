@@ -1,3 +1,42 @@
+---
+title: "Assignment3"
+author: "Kim Pearce"
+date: "2022-12-01"
+output: bookdown::html_document2
+fig_caption: yes
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE,fig.align = 'center')
+```
+
+```{r}
+
+library(tidyverse)
+library(ggplot2)
+
+```
+
+# Display Numbers generated from Normal Distribution
+
+Below is a simulation of random numbers generated from a normal distribution. 
+
+```{r kimdemoassign3, fig.cap='Random Noise Example'}
+
+set.seed(5858)
+
+x = seq(1:100) 
+y = rnorm(100) 
+dat = data.frame(x, y) 
+ggplot(dat, aes(x = x, y = y)) + 
+  geom_line() +
+  labs(title = 'Random Normal Distribution of 100 samples') +
+  theme(panel.background = element_blank(),
+        axis.line = element_line(colour = 'grey'))
+
+```
+
+
 # Adding a New Figure
 ```{r out.width=60%,echo=FALSE,fig.align='center'} knitr::include_graphics("figs/yourfigure.png")
 
