@@ -1,0 +1,4 @@
+# Adding a New Figure
+```{r out.width=60%,echo=FALSE,fig.align='center'} knitr::include_graphics("figs/yourfigure.png")
+
+```
